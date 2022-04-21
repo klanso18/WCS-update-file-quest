@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 ?>
 
-<img src="<?php echo $uploadDir . $uploadFile; ?>" />
+
 
 
 
@@ -66,6 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         </br>
         <button name="send">Send</button>
     </form>
+
+    <img src=" <?php if($_SERVER['REQUEST_METHOD'] === "POST") echo $uploadFile; ?> ">
+
 </body>
 
 </html>
